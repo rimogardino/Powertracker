@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Power tracker</string>
+    <string name="session">Session</string>
+    <string name="history">History</string>
+    <string name="had_food">Had food?</string>
+    <string name="coffee_question">Coffee?</string>
+    <string name="time_of_day">Time of day</string>
+    <string name="feeling">Feeling</string>
+    <string name="reps">Reps</string>
+    <string name="dataFormat">yyyyMMdd</string>
+    <string name="extra_thoughts">Extra thoughts</string>
+    <string name="weight_lbl">Weight</string>
+    <string name="reps_lbl">Reps</string>
+    <string name="export_history">Export history</string>
+    <string name="date">Date:</string>
+    <string name="actual_date">Actual date</string>
+    <string name="graphs_contentDescription">Graphs placeholder</string>
+
+    <string-array name="exercises">
+        <item>None</item>
+        <item>Squat</item>
+        <item>Front Squat</item>
+        <item>Sumo Deadlift</item>
+        <item>Deadlift</item>
+        <item>Bench Press</item>
+        <item>Close grip Bench Press</item>
+        <item>Overhead press</item>
+        <item>Bent over rows</item>
+        <item>Pull ups</item>
+        <item>Dips</item>
+        <item>Calves</item>
+        <item>Lunges</item>
+        <item>Dumbbell walks</item>
+        <item>Shoulder bodibuild/health</item>
+    </string-array>
+
+
+</resources>

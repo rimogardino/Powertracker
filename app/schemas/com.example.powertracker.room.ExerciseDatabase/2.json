@@ -1,0 +1,118 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "a453a42fcb15cc00f346ecc756e00cc4",
+    "entities": [
+      {
+        "tableName": "ExerciseEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`date` TEXT NOT NULL, `exercise_1` TEXT, `exercise_2` TEXT, `exercise_3` TEXT, `exercise_4` TEXT, `exercise_5` TEXT, `exercise_6` TEXT, `exercise_7` TEXT, `sleep` INTEGER NOT NULL, `foodTime` TEXT NOT NULL, `timeOfDay` TEXT NOT NULL, `restDays` INTEGER NOT NULL, `coffee` TEXT NOT NULL, `howFeel` REAL NOT NULL, `extras` TEXT NOT NULL, PRIMARY KEY(`date`))",
+        "fields": [
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exercise_1",
+            "columnName": "exercise_1",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "exercise_2",
+            "columnName": "exercise_2",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "exercise_3",
+            "columnName": "exercise_3",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "exercise_4",
+            "columnName": "exercise_4",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "exercise_5",
+            "columnName": "exercise_5",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "exercise_6",
+            "columnName": "exercise_6",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "exercise_7",
+            "columnName": "exercise_7",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sleep",
+            "columnName": "sleep",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "foodTime",
+            "columnName": "foodTime",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timeOfDay",
+            "columnName": "timeOfDay",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "restDays",
+            "columnName": "restDays",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coffee",
+            "columnName": "coffee",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "howFeel",
+            "columnName": "howFeel",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "extras",
+            "columnName": "extras",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "date"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a453a42fcb15cc00f346ecc756e00cc4')"
+    ]
+  }
+}

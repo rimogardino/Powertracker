@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content" android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="false"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@android:color/darker_gray"
+    android:padding="8dp"
+
+    >
+
+
+
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/exercises"
+        android:spinnerMode="dialog"
+        android:background="@color/colorPrimary"
+        android:padding="3dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/reps_lbl_1"
+        android:text="@string/reps_lbl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/reps_1"
+        app:layout_constraintStart_toEndOf="@id/spinner_exercise"
+        style="@style/repTextStyle" />
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/reps_1"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:inputType="number"
+        android:background="@color/rep_color"
+        android:textCursorDrawable="@drawable/black_cursor"
+
+        android:spinnerMode="dialog"
+
+        app:layout_constraintStart_toEndOf="@+id/spinner_exercise"
+        app:layout_constraintTop_toBottomOf="@+id/reps_lbl_1"
+        app:layout_constraintWidth_default="wrap"/>
+
+
+
+    <TextView
+        android:id="@+id/weight_lbl_1"
+
+
+        android:text="@string/weight_lbl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/weights_1"
+        app:layout_constraintStart_toEndOf="@id/reps_lbl_1"
+        style="@style/weightTextStyle" />
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/weights_1"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@color/weight_color"
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:spinnerMode="dialog"
+        app:layout_constraintStart_toEndOf="@+id/reps_1"
+        app:layout_constraintTop_toBottomOf="@+id/weight_lbl_1"
+        android:inputType="numberDecimal"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/separator_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/weights_1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/reps_lbl_2"
+        style="@style/repTextStyle"
+
+        android:text="@string/reps"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/reps_2"
+        app:layout_constraintStart_toEndOf="@id/separator_1"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/reps_2"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:tag="@string/reps"
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:spinnerMode="dialog"
+        android:background="@color/rep_color"
+
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/separator_1"
+        app:layout_constraintTop_toBottomOf="@+id/reps_lbl_2" />
+
+
+
+    <TextView
+        android:id="@+id/weight_lbl_2"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+
+        android:textAlignment="center"
+        android:text="Weight" android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/weights_2"
+        app:layout_constraintStart_toEndOf="@id/reps_lbl_2"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/weights_2"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:spinnerMode="dialog"
+        android:background="@color/weight_color"
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/reps_2"
+        app:layout_constraintTop_toBottomOf="@+id/weight_lbl_2" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/reps_lbl_3"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:text="@string/reps" android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_exercise"
+        app:layout_constraintBottom_toTopOf="@id/reps_3"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/reps_3"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:spinnerMode="dialog"
+        android:background="@color/rep_color"
+
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/reps_lbl_3"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+    <TextView
+        android:id="@+id/weight_lbl_3"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:text="Weight" android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_exercise"
+        app:layout_constraintBottom_toTopOf="@id/weights_3"
+        app:layout_constraintStart_toEndOf="@id/reps_lbl_3"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/weights_3"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:spinnerMode="dialog"
+        android:background="@color/weight_color"
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/weight_lbl_3"
+        app:layout_constraintStart_toEndOf="@id/reps_3"/>
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/separator_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/weights_3"
+        app:layout_constraintTop_toTopOf="@+id/weight_lbl_3"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        />
+
+
+
+
+
+    <TextView
+        android:id="@+id/reps_lbl_4"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:text="Reps" android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_exercise"
+        app:layout_constraintBottom_toTopOf="@id/reps_4"
+        app:layout_constraintStart_toEndOf="@id/separator_2"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/reps_4"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:spinnerMode="dialog"
+        android:background="@color/rep_color"
+
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/separator_2"
+        app:layout_constraintTop_toBottomOf="@+id/reps_lbl_4" />
+
+
+
+    <TextView
+        android:id="@+id/weight_lbl_4"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:text="Weight" android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_exercise"
+        app:layout_constraintBottom_toTopOf="@id/weights_4"
+        app:layout_constraintStart_toEndOf="@id/reps_lbl_4"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/weights_4"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:spinnerMode="dialog"
+        android:background="@color/weight_color"
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/reps_4"
+        app:layout_constraintTop_toBottomOf="@+id/weight_lbl_4" />
+
+
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/separator_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/weights_4"
+        app:layout_constraintTop_toTopOf="@+id/weight_lbl_4"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        />
+
+
+
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/reps_lbl_5"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:text="Reps" android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_exercise"
+        app:layout_constraintBottom_toTopOf="@id/reps_5"
+        app:layout_constraintStart_toEndOf="@id/separator_3"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/reps_5"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:spinnerMode="dialog"
+        android:background="@color/rep_color"
+
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/separator_3"
+        app:layout_constraintTop_toBottomOf="@+id/reps_lbl_5" />
+
+
+
+    <TextView
+        android:id="@+id/weight_lbl_5"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:text="Weight" android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_exercise"
+        app:layout_constraintBottom_toTopOf="@id/weights_5"
+        app:layout_constraintStart_toEndOf="@id/reps_lbl_5"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/weights_5"
+        android:layout_width="@dimen/rep_input_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:spinnerMode="dialog"
+        android:background="@color/weight_color"
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/reps_5"
+        app:layout_constraintTop_toBottomOf="@+id/weight_lbl_5" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
